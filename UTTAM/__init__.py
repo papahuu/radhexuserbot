@@ -33,57 +33,57 @@ app = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    plugins=dict(root="RAUSHAN/plugins"),  # Plugins directory ka root
+    plugins=dict(root="UTTAM/plugins"),  # Plugins directory ka root
     in_memory=True,
 )
 
 # Additional clients using session strings, all loading plugins from the same folder
 if STRING_SESSION1:
    print("Client1: Found.. Starting..📳")
-   client1 = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION1, plugins=dict(root="RAUSHAN/plugins"))
+   client1 = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION1, plugins=dict(root="UTTAM/plugins"))
    clients.append(client1)
 
 if STRING_SESSION2:
    print("Client2: Found.. Starting.. 📳")
-   client2 = Client(name="two", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION2, plugins=dict(root="RAUSHAN/plugins"))
+   client2 = Client(name="two", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION2, plugins=dict(root="UTTAM/plugins"))
    clients.append(client2)
 
 if STRING_SESSION3:
    print("Client3: Found.. Starting.. 📳")
-   client3 = Client(name="three", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION3, plugins=dict(root="RAUSHAN/plugins"))
+   client3 = Client(name="three", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION3, plugins=dict(root="UTTAM/plugins"))
    clients.append(client3)
 
 if STRING_SESSION4:
    print("Client4: Found.. Starting.. 📳")
-   client4 = Client(name="four", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION4, plugins=dict(root="RAUSHAN/plugins"))
+   client4 = Client(name="four", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION4, plugins=dict(root="UTTAM/plugins"))
    clients.append(client4)
 
 if STRING_SESSION5:
    print("Client5: Found.. Starting.. 📳")
-   client5 = Client(name="five", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION5, plugins=dict(root="RAUSHAN/plugins"))
+   client5 = Client(name="five", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION5, plugins=dict(root="UTTAM/plugins"))
    clients.append(client5)
 
 if STRING_SESSION6:
    print("Client6: Found.. Starting.. 📳")
-   client6 = Client(name="six", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION6, plugins=dict(root="RAUSHAN/plugins"))
+   client6 = Client(name="six", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION6, plugins=dict(root="UTTAM/plugins"))
    clients.append(client6)
 
 if STRING_SESSION7:
    print("Client7: Found.. Starting.. 📳")
-   client7 = Client(name="seven", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION7, plugins=dict(root="RAUSHAN/plugins"))
+   client7 = Client(name="seven", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION7, plugins=dict(root="UTTAM/plugins"))
    clients.append(client7)
 
 if STRING_SESSION8:
    print("Client8: Found.. Starting.. 📳")
-   client8 = Client(name="eight", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION8, plugins=dict(root="RAUSHAN/plugins"))
+   client8 = Client(name="eight", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION8, plugins=dict(root="UTTAM/plugins"))
    clients.append(client8)
 
 if STRING_SESSION9:
    print("Client9: Found.. Starting.. 📳")
-   client9 = Client(name="nine", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION9, plugins=dict(root="RAUSHAN/plugins"))
+   client9 = Client(name="nine", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION9, plugins=dict(root="UTTAM/plugins"))
    clients.append(client9)
 
 if STRING_SESSION10:
    print("Client10: Found.. Starting.. 📳")
-   client10 = Client(name="ten", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION10, plugins=dict(root="RAUSHAN/plugins"))
+   client10 = Client(name="ten", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION10, plugins=dict(root="UTTAM/plugins"))
    clients.append(client10)
