@@ -1,7 +1,7 @@
 import asyncio
 from pyrogram import Client, idle
-from RAUSHAN.helper import join
-from RAUSHAN import clients, app, ids
+from UTTAM.helper import join
+from UTTAM import clients, app, ids
 from flask import Flask
 import threading
 import requests
