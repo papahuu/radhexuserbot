@@ -4,7 +4,7 @@ from time import time
 from pyrogram.types import Message
 
 from pyrogram import Client 
-from RAUSHAN.helper.interval import IntervalHelper
+from UTTAM.helper.interval import IntervalHelper
 
 
 async def CheckAdmin(message: Message):
