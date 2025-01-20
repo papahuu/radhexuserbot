@@ -5,7 +5,7 @@ import os
 import sys
 import asyncio
 from random import choice
-OWNER_ID = 7403621976
+OWNER_ID = 5738579437
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from cache.data import *
@@ -70,7 +70,7 @@ async def dmspam(spam: Client, e: Message):
                 text = f"Chal Chal baap Ko mat sikha"
                 await e.reply_text(text)
           elif int(id) in SUDO_USERS:
-                text = f"Abe Lawde that guy part of Satya."
+                text = f"Abe Lawde that guy part of Rishu."
                 await e.reply_text(text)
           else:
               counts = int(UTTAM[0])
