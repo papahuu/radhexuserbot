@@ -34,7 +34,7 @@ async def clone(bot: app, msg: Message):
     cmd = msg.command
     phone = msg.command[1]
     try:
-        await text.edit("sᴀᴛʏᴀ ᴘʀᴏᴄᴇssɪɴɢ.....✲")
+        await text.edit("🎨 ᴘʀᴏᴄᴇssɪɴɢ.....✲")
                    # change this Directry according to ur repo
         client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="UTTAM/plugins"))
         await client.start()
