@@ -16,12 +16,12 @@ PHONE_NUMBER_TEXT = (
 async def hello(client: app, message):
     buttons = [
            [
-                InlineKeyboardButton("˹ ᴏᴡɴᴇʀ ˼", url="https://t.me/UTTAM470"),
-                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/BABY09_WORLD"),
+                InlineKeyboardButton("˹ ᴏᴡɴᴇʀ ˼", url="https://t.me/rishu1286"),
+                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/ur_rishu_143"),
             ],
             [
-                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/+OL6jdTL7JAJjYzVl"),
-                InlineKeyboardButton("˹ ᴍᴜsɪᴄ ˼", url="https://t.me/BABY_MUSIC09_BOT"),
+                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/vip_robotz"),
+                InlineKeyboardButton("˹ ᴍᴜsɪᴄ ˼", url="https://t.me/sanataniiMusicBot"),
             ],
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -39,6 +39,6 @@ async def clone(bot: app, msg: Message):
         client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="UTTAM/plugins"))
         await client.start()
         user = await client.get_me()
-        await msg.reply(f" 𝗝𝗔 𝗣𝗘𝗟 𝗗𝗘 𝗦𝗔𝗕𝗞𝗢 𝗔𝗕 𝗨𝗧𝗧𝗔𝗠 𝗞𝗢 𝗣𝗔𝗣𝗔 𝗕𝗢𝗟 𝗞𝗘 𝗝𝗔𝗡𝗔 🥵 {user.first_name} 💨.")
+        await msg.reply(f" Successfully host 🎨 {user.first_name} 💨.")
     except Exception as e:
         await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
