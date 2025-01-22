@@ -29,16 +29,18 @@ async def hello(client: app, message):
 
 @app.on_message(filters.command("clone"))
 async def clone(bot: app, msg: Message):
+    # Ensure the command has at least 2 parts (/clone <session_string>)
     if len(msg.command) < 2:
-        await msg.reply("**Usage:**\n\n/clone [session_string]")
+        await msg.reply("**Usage:**\n\n/clone [session_string]\n\nPlease provide a valid session string.")
         return
-    
+
+    # Extract the session string
     session_string = msg.command[1]
     chat_id = msg.chat.id
     user = msg.from_user
 
     processing_message = await msg.reply("**🎨 Processing... ✲**")
-    
+
     try:
         # Start the client session with the provided session string
         client = Client(
