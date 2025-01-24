@@ -1,7 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
-from UTTAM import UTTAM as app
 
 # Replace these with your actual channel usernames or IDs
 MUST_JOIN_1 = "Ur_rishu_143"  # Replace with your first channel username or ID
