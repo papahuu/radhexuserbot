@@ -9,9 +9,9 @@ if os.path.exists("local.env"):
 API_ID = int(getenv("API_ID", "14050586")) #optional
 API_HASH = getenv("API_HASH", "42a60d9c657b106370c79bb0a8ac560c") #optional
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5738579437").split()))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "8093150680").split()))
 OWNER_ID = int(getenv("OWNER_ID", "5738579437"))
-MONGO_URL = getenv("MONGO_URL", "mongodb+srv://Krishna:pss968048@cluster0.4rfuzro.mongodb.net/?retryWrites=true&w=majority")
+MONGO_URL = getenv("MONGO_URL")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/o1zhtn.jpg')
 ALIVE_TEXT = getenv("ALIVE_TEXT")
