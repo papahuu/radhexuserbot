@@ -3,7 +3,7 @@
     "logo": "https://envs.sh/Oib.jpg",
     "description": "An first Telegram Userbot with multi Clients for Spamming or Mass.",
     "keywords": ["pyrogram", "userbot"],
-    "repository": "https://github.com/Rishuz/Slove",
+    "repository": "https://github.com/papahuu/radhexuserbot",
   "stack": "container",
     "env": {
         "STRING_SESSION1": {
