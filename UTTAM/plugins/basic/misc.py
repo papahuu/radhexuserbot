@@ -17,14 +17,14 @@ if ALIVE_TEXT:
    txt = ALIVE_TEXT
 else:
     txt = (
-        f"** ᯓ𓆰𝅃꯭᳚ ⃪ ꯭꯭꯭꯭꯭꯭꯭꯭꯭꯭᪵᪳༎ ꯭⁢⁣⁤⁣⁣⁢⁣⁤⁢⁤⁣⁢⁤⁣⁤᪳᪳🇷꯭ ꯭𝐈‌𝛅꯭꯭ʜ꯭֟፝︢︣𝛖꯭ ꯭꯭𝆺꯭𝅥༎ࠫ𐏓꯭ 𝅃  **\n\n"
+        f"** ⎯꯭֯🖤⃪ ꯭⃛֯ ̶̲̽͟𓆩⃪ͥ͢ ᷟ𓆩𝙍𝘼𝘿𝙃𝙀 ⃪𝄀꯭𝄄꯭ا✾༐𓂃⃪꯭,, ㅤ ™  **\n\n"
         f"❏ **𝐕ᴇʀsɪᴏɴ**: `2.1`\n"
         f"├• **𝐔ᴘᴛɪᴍᴇ**: `{str(datetime.now() - START_TIME).split('.')[0]}`\n"
         f"├• **𝐏ʏᴛʜᴏɴ**: `{python_version()}`\n"
         f"├• **𝐏ʏʀᴏɢʀᴀᴍ**: `{__version__}`\n"
-        f"├• **𝐒ᴜᴘᴘᴏʀᴛ-𝐂ʜᴀᴛ**: [ᯓ𓆰𝅃꯭᳚ ⃪ ꯭꯭꯭꯭꯭꯭꯭꯭꯭꯭᪵᪳༎ ꯭⁢⁣⁤⁣⁣⁢⁣⁤⁢⁤⁣⁢⁤⁣⁤᪳᪳🇷꯭ ꯭𝐈‌𝛅꯭꯭ʜ꯭֟፝︢︣𝛖꯭ ꯭꯭𝆺꯭𝅥༎ࠫ𐏓꯭ 𝅃](t.me/ur_support07)\n"
-        f"├• **𝐔ᴘᴅᴀᴛᴇs**: [ᯓ𓆰𝅃꯭᳚ ⃪ ꯭꯭꯭꯭꯭꯭꯭꯭꯭꯭᪵᪳༎ ꯭⁢⁣⁤⁣⁣⁢⁣⁤⁢⁤⁣⁢⁤⁣⁤᪳᪳🇷꯭ ꯭𝐈‌𝛅꯭꯭ʜ꯭֟፝︢︣𝛖꯭ ꯭꯭𝆺꯭𝅥༎ࠫ𐏓꯭ 𝅃](t.me/ur_rishu_143)\n"
-        f"└• **𝐌ᴀsᴛᴇʀ**: [ᯓ𓆰𝅃꯭᳚ ⃪ ꯭꯭꯭꯭꯭꯭꯭꯭꯭꯭᪵᪳༎ ꯭⁢⁣⁤⁣⁣⁢⁣⁤⁢⁤⁣⁢⁤⁣⁤᪳᪳🇷꯭ ꯭𝐈‌𝛅꯭꯭ʜ꯭֟፝︢︣𝛖꯭ ꯭꯭𝆺꯭𝅥༎ࠫ𐏓꯭ ](t.me/Rishu1286)"        
+        f"├• **𝐒ᴜᴘᴘᴏʀᴛ-𝐂ʜᴀᴛ**: [⎯꯭֯🖤⃪ ꯭⃛֯ ̶̲̽͟𓆩⃪ͥ͢ ᷟ𓆩𝙍𝘼𝘿𝙃𝙀 ⃪𝄀꯭𝄄꯭ا✾༐𓂃⃪꯭,, ㅤ ™](t.me/ur_support07)\n"
+        f"├• **𝐔ᴘᴅᴀᴛᴇs**: [⎯꯭֯🖤⃪ ꯭⃛֯ ̶̲̽͟𓆩⃪ͥ͢ ᷟ𓆩𝙍𝘼𝘿𝙃𝙀 ⃪𝄀꯭𝄄꯭ا✾༐𓂃⃪꯭,, ㅤ ™](t.me/ur_rishu_143)\n"
+        f"└• **𝐌ᴀsᴛᴇʀ**: [⎯꯭֯🖤⃪ ꯭⃛֯ ̶̲̽͟𓆩⃪ͥ͢ ᷟ𓆩𝙍𝘼𝘿𝙃𝙀 ⃪𝄀꯭𝄄꯭ا✾༐𓂃⃪꯭,, ㅤ ™](t.me/Rishu1286)"        
     )
 
 @Client.on_message(
@@ -57,7 +57,7 @@ async def repo(bot: Client, message: Message):
     await asyncio.sleep(1)
     await message.edit("Fetching Source Code.....")
     await asyncio.sleep(1)
-    await message.edit("SORRY MERI JAAN REPO CHAHIYE TO DM KAR LO @Rishu1286")
+    await message.edit("SORRY MERI JAAN REPO CHAHIYE TO DM KAR LO @RADHE_XD7")
 
 
 @Client.on_message(filters.command("creator", ".") & filters.me)
