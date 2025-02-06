@@ -6,17 +6,17 @@ if os.path.exists("local.env"):
     load_dotenv("local.env")
 
 
-API_ID = int(getenv("API_ID", "14050586")) #optional
-API_HASH = getenv("API_HASH", "42a60d9c657b106370c79bb0a8ac560c") #optional
+API_ID = int(getenv("API_ID", "20054364")) #optional
+API_HASH = getenv("API_HASH", "6a9a4fbda55762023c32133f76cbc1d1") #optional
 
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "8093150680").split()))
-OWNER_ID = int(getenv("OWNER_ID", "5738579437"))
+SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5738579437").split()))
+OWNER_ID = int(getenv("OWNER_ID", "8093150680"))
 MONGO_URL = getenv("MONGO_URL")
 BOT_TOKEN = getenv("BOT_TOKEN", "")
-ALIVE_PIC = getenv("ALIVE_PIC", 'https://files.catbox.moe/o1zhtn.jpg')
+ALIVE_PIC = getenv("ALIVE_PIC", 'https://envs.sh/620.jpg')
 ALIVE_TEXT = getenv("ALIVE_TEXT")
 PM_LOGGER = getenv("PM_LOGGER")
-LOG_GROUP = getenv("LOG_GROUP","-1001992970818")
+LOG_GROUP = getenv("LOG_GROUP","-1002458103093")
 GIT_TOKEN = getenv("GIT_TOKEN") #personal access token
 REPO_URL = getenv("REPO_URL", "https://github.com/Rishuz/Slove")
 BRANCH = getenv("BRANCH", "main") #don't change
