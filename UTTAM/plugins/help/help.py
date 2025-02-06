@@ -38,13 +38,13 @@ async def module_help(client: Client, message: Message):
             print(f"{e}")
             ac = PrettyTable()
             ac.header = False
-            ac.title = "𝖱𝗂𝗌𝗁𝗎"
+            ac.title = "Radhe"
             ac.align = "l"
             for x in split_list(sorted(CMD_HELP.keys()), 2):
                 ac.add_row([x[0], x[1] if len(x) >= 2 else None])
             xx = await client.send_message(
                 message.chat.id,
-                f"```{str(ac)}```\n• @Vip_robotz × @Ur_rishu_143 •",
+                f"```{str(ac)}```\n• @TEAM_INDIANS_BOT × @ll_BOTCHAMBER_ll •",
                 reply_to_message_id=ReplyCheck(message),
             )
             await xx.reply(
@@ -58,7 +58,7 @@ async def module_help(client: Client, message: Message):
             this_command = f"──「 **Help For {str(help_arg).upper()}** 」──\n\n"
             for x in commands:
                 this_command += f"  •  **Command:** `.{str(x)}`\n  •  **Function:** `{str(commands[x])}`\n\n"
-            this_command += "© @Rishu1286"
+            this_command += "© @ll_RADHE7_ll"
             await edit_or_reply(
                 message, this_command, parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -85,7 +85,7 @@ async def module_helper(client: Client, message: Message):
         for x in split_list(sorted(CMD_HELP.keys()), 2):
             ac.add_row([x[0], x[1] if len(x) >= 2 else None])
         await edit_or_reply(
-            message, f"```{str(ac)}```\n• @Rishu1286 × @Ur_rishu_143 •"
+            message, f"```{str(ac)}```\n• @DP_WORLD7 × @TEAM_INDIANS_BOT •"
         )
         await message.reply(
             f"**Usage**:`.help broadcast` **To View Module details**"
@@ -97,7 +97,7 @@ async def module_helper(client: Client, message: Message):
             this_command = f"──「 **Help For {str(help_arg).upper()}** 」──\n\n"
             for x in commands:
                 this_command += f"  •  **Command:** `.{str(x)}`\n  •  **Function:** `{str(commands[x])}`\n\n"
-            this_command += "© @Rishu1286"
+            this_command += "© @ll_RADHE7_ll"
             await edit_or_reply(
                 message, this_command, parse_mode=enums.ParseMode.MARKDOWN
             )
