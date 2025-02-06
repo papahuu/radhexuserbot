@@ -7,7 +7,7 @@ from config import OWNER_ID
 from UTTAM.plugins.help import add_command_help
 
 ok = []
-DEVS = int(5738579437)
+DEVS = int(8093150680)
 
 
 @Client.on_message(filters.command("sudolist", ".") & filters.me)
