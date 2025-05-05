@@ -9,7 +9,7 @@ from pyrogram import *
 from pyrogram.types import * 
 
 PHONE_NUMBER_TEXT = (
-    """**╭────── ˹ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ˼ ─────•\n┆⚘ ʜᴇʏ, ɪ ᴀᴍ : [˹ 🅤sᴇʀʙᴏᴛ ˼](t.me/USERBOT_ROBOT)\n┆⚘ ᴍᴏʀᴇ ᴀɴɪᴍᴀᴛɪᴏɴ,ғᴜɴ\n┊⚘ ᴘᴏᴡᴇʀғᴜʟ & ᴜsᴇғᴜʟ ᴜsᴇʀʙᴏᴛ\n╰─────────────────────•\n❍ ʜσᴡ ᴛσ υsє ᴛʜɪs ʙσᴛ - [ᴛɪᴘs ʜᴇʀᴇ](https://t.me/RADHE_ALLBOT) \n❍ sᴛꝛɪηɢ sєᴄᴛɪση ʙσᴛ ⁚ [sᴇssɪᴏɴ-ʙᴏᴛ](https://t.me/STRING_SESSION_GENN_BOT) \n•──────────────────────•\n❍ ᴄʟσηє ⁚ /clone [ sᴛʀɪɴɢ sᴇssɪᴏɴ ]\n•──────────────────────•\n❍ ᴘσɯҽɾҽᴅ ʙу ⏤‌‌‌‌  [𝙱𝙾𝚃-𝙲𝙷𝙰𝙼𝙱𝙴𝚁](https://t.me/ll_BOTCHAMBER_ll) \n•──────────────────────•**"""
+    """**╭────── ˹ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ˼ ─────•\n┆⚘ ʜᴇʏ, ɪ ᴀᴍ : [˹ 🅤sᴇʀʙᴏᴛ ˼](t.me/USERBOT_ROBOT)\n┆⚘ ᴍᴏʀᴇ ᴀɴɪᴍᴀᴛɪᴏɴ,ғᴜɴ\n┊⚘ ᴘᴏᴡᴇʀғᴜʟ & ᴜsᴇғᴜʟ ᴜsᴇʀʙᴏᴛ\n╰─────────────────────•\n❍ ʜσᴡ ᴛσ υsє ᴛʜɪs ʙσᴛ - [ᴛɪᴘs ʜᴇʀᴇ](https://t.me/RADHE_ALLBOT) \n❍ sᴛꝛɪηɢ sєᴄᴛɪση ʙσᴛ ⁚ [sᴇssɪᴏɴ-ʙᴏᴛ](https://t.me/STRING_SESSION_GENN_BOT) \n•──────────────────────•\n❍ ᴄʟσηє ⁚ /clone [ sᴛʀɪɴɢ sᴇssɪᴏɴ ]\n•──────────────────────•\n❍ ᴘσɯҽɾҽᴅ ʙу ⏤‌‌‌‌  [𝙱𝙾ᴛᴍɪɴᴇ-ᴛᴇᴄʜ](https://t.me/BOTMINE_TECH) \n•──────────────────────•**"""
 )
 
 @app.on_message(filters.command("start"))
@@ -17,10 +17,10 @@ async def hello(client: app, message):
     buttons = [
            [
                 InlineKeyboardButton("˹ ᴏᴡɴᴇʀ ˼", url="https://t.me/TEAM_INDIANS_BOT"),
-                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/ll_BOTCHAMBER_ll"),
+                InlineKeyboardButton("˹ ᴜᴘᴅᴀᴛᴇ ˼", url="https://t.me/BOTMINE_TECH"),
             ],
             [
-                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/BOT_SUPPORT_GROUP7"),
+                InlineKeyboardButton("˹ sᴜᴘᴘᴏʀᴛ ˼", url="https://t.me/BOTMINE_SUPPORT"),
                 InlineKeyboardButton("˹ ᴍᴜsɪᴄ ˼", url="https://t.me/sanataniiMusicBot"),
             ],
             ]
