@@ -59,72 +59,48 @@ async def pornspam(xspam: Client, e: Message):
 
 
 @Client.on_message(
-    filters.command(["raid"], ".") & (filters.me | filters.user(SUDO_USER))
-)
-async def raid(xspam: Client, e: Message):  
-      UTTAM = "".join(e.text.split(maxsplit=1)[1:]).split(" ", 2)
-      if len(UTTAM) == 2:
-          counts = int(UTTAM[0])
-          if int(e.chat.id) in GROUP:
-               return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          ok = await xspam.get_users(UTTAM[1])
-          id = ok.id
-#          try:
-#              userz = await xspam.get_users(id)
-#          except:
-#              await e.reply(f"`404 : User Doesn't Exists In This Chat !`")
-#              return #remove # to enable this
-          if int(id) in VERIFIED_USERS:
-                text = f"Chal Chal baap Ko mat sikha"
-                await e.reply_text(text)
-          elif int(id) in SUDO_USERS:
-                text = f"Abe Lawde that guy part of Satya."
-                await e.reply_text(text)
-          else:
-              fname = ok.first_name
-              mention = f"[{fname}](tg://user?id={id})"
-              for _ in range(counts):
-                    reply = choice(RAID)
-                    msg = f"{mention} {reply}"
-                    await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
-      elif e.reply_to_message:
-          msg_id = e.reply_to_message.from_user.id
-          counts = int(UTTAM[0])
-          if int(e.chat.id) in GROUP:
-               return await e.reply_text("**Sorry !! i Can't Spam Here.**")
-          user_id = e.reply_to_message.from_user.id
-          ok = await xspam.get_users(user_id)
-          id = ok.id
-          try:
-              userz = await xspam.get_users(id)
-          except:
-              await e.reply(f"`404 : User Doesn't Exists In This Chat !`")
-              return
-          if int(id) in VERIFIED_USERS:
-                text = f"Chal Chal baap Ko mat sikha"
-                await e.reply_text(text)
-          elif int(id) in SUDO_USERS:
-                text = f"Abe Lawde that guy part of Satya."
-                await e.reply_text(text)
-          else:
-              fname = ok.first_name
-              mention = f"[{fname}](tg://user?id={id})"
-              for _ in range(counts):
-                    reply = choice(RAID)
-                    msg = f"{mention} {reply}"
-                    await xspam.send_message(e.chat.id, msg)
-                    await asyncio.sleep(0.10)
-      else:
-          await e.reply_text("Usage: .raid count username")
+@Client.on_message(filters.command("raid", ".") & (filters.me | filters.user(SUDO_USERS)))
+async def raid(_, message: Message):
+    if len(message.command) < 2 and not message.reply_to_message:
+        return await message.reply_text("Usage: `.raid <count> <username>` or reply to user")
 
+    # Parsing count
+    if message.reply_to_message:
+        try:
+            count = int(message.command[1])
+        except:
+            return await message.reply_text("Invalid count. Usage: `.raid <count>` (when replying)")
+        target_user = message.reply_to_message.from_user
+    else:
+        try:
+            count = int(message.command[1])
+            target = message.command[2]
+        except:
+            return await message.reply_text("Usage: `.raid <count> <username>` or reply to user")
+        try:
+            target_user = await _.get_users(target)
+        except:
+            return await message.reply_text("User not found!")
 
+    if target_user.id in VERIFIED_USERS:
+        return await message.reply_text("**Protected User!** Can't raid them.")
+    if target_user.id in SUDO_USERS:
+        return await message.reply_text("**Sudo User Detected!** Raid aborted.")
+
+    mention = f"[{target_user.first_name}](tg://user?id={target_user.id})"
+    for _ in range(count):
+        msg = f"{mention} {choice(RAID)}"
+        await message.chat.send_message(msg)
+        await asyncio.sleep(0.1)  # Adjust delay for speed
+
+    await message.reply_text(f"**Raid completed on** {mention} with `{count}` messages.")
+
+# Optional help command addition
 add_command_help(
     "raid",
     [
-        [".raid", "<user id and count>`."],
-        [".pornspam", "<count>`."],
-        [".hang", "Make telegram hang."],
+        [".raid <count> <username>", "Raid a user by username or ID"],
+        [".raid <count>", "Raid a user by replying to their message"],
     ],
 )
 
